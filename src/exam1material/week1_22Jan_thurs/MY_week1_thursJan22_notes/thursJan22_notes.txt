@@ -67,6 +67,19 @@ Bill claims that it's false that Mae is a knave.
 Mae tells you, "Bill would tell you that I am a knave."
 
 What types are Sarah, Bill, and Mae?
+    Sarah: Bill is a knight
+    Bill: Mar is a knight
+    Mae: Bill would say I''m a knave
+
+Suppose Sarah is a knight. Then Bill must be a knight and Mae must be a knight. This doesn't work since Bill
+    would say that Mae is a knight.
+
+Suppose instead Sarah is a knave. Then Bill and Mae must be knaves. Bill would lie and say Maw is a knight, 
+    but Mae lies about this and says Bill would say knave. Works.
+
+    Sarah: Knave
+    Bill: Knave
+    Mae: Knave
 
 
 (How might we simplify everything?)
@@ -89,6 +102,15 @@ Unicorn says: "Yesterday was one of my lying days, too."
 
 What day is it?
 
+Sunday: Lion didn't lie yesterday and should be telling the truth
+Tuesday/Wednesday/Friday/Saturday: Whover is lying that day also lied the day before, 
+    but should be lying about that.
+Monday: Unicorn tells the truth Mon/Sun, should say they didn't lie
+Thursday: Lion truthfully says they lied on Wednesday.
+    Unicorn corectly lies about lying on Wednesday.
+
+    Thursday.
+
 
 
 ////////////////////////////////
@@ -107,6 +129,10 @@ The first one says: "I'm Tweedledum."
 The second one says: "I'm Tweedledee."
 
 Which is which? What day is it?
+
+First: Tweedledum
+Second: Tweedledee
+    Sunday. Every other day they would say the same name. They are who they say they are.
 
 
 
@@ -138,8 +164,18 @@ The first one says: "Tweedledee owns the rattle."
 The second one says: "I'm Tweedledee!"
 
 Who gets the rattle?
+    Suppose the first twin is telling the truth.
+        Rattle goes to Tweedledee. Second twin must be lying, So
+        second twin is Tweedledum. First twin must be Tweedledee, So
+        the first twin gets the rattle.
+    Suppose the first twin is lying.
+        Rattle goes to Tweedledum. Second twin must be telling the truth,
+        so the second twin is Tweed,edee. First twin must be Tweedledum. 
+        The first twin (Tweedledum), gets the rattle
 
 Who is who?
+
+Can't decide who is who, but the first twin always gets the rattle.
 
 
 ///////////////////////////////////////////
@@ -156,9 +192,17 @@ Gold casket: "The portrait is in this casket."
 Silver casket: "The portrait is not in this casket."
 Lead casket: "The portrait is not in the gold casket."
 
+All messages could be false, or just one message could be true.
+
 Where is the portrait?
 
+Suppose it's in the gold. True, True, False. Both gold and silver statements would be true, so not the case.
 
+Suppose it's in the silver. False, False, True. Just one statement is true, so this works.
+
+Suppose it's in the lead. False, True, True. Two statements are true, so can't work.
+
+Answer: It's in the silver
 
 
 
@@ -194,7 +238,12 @@ Bernard says: "At first I didn't know when Cheryl's
 Albert says: "Then I also know when Cheryl's birthday is."
 
 
-When is it?
+When is it? July 16th
+
+Albert: month
+Bernard: day
+
+19th and 18th are unique. Albert wouldn't be able to certainly say that Bernard din't know the day 
 
 
 
@@ -217,13 +266,14 @@ Basic operations:
 
 
 Basic logic gates (draw on board)
+    AND, OR, NOT
 
 
 gates still used to design circuits
 
 
 why do we care about equivalent circuits?
-
+    optimization, reduce complexity, etc.
 
 what about programming?
 
@@ -236,28 +286,28 @@ AND:
 
 p q  #  p ∧ q
 --------------
-T T  #    
-T F  #    
-F T  #     
-F F  #    
+T T  #    T
+T F  #    F
+F T  #    F
+F F  #    F
 
 
 OR:
 
 p q  #  p ∨ q
 --------------
-T T  #    
-T F  #    
-F T  #    
-F F  #    
+T T  #    T
+T F  #    T
+F T  #    T
+F F  #    F
 
 
 NOT:
 
 p  # ¬p
 --------
-T  # 
-F  # 
+T  # F
+F  # T
 
 ////////////////////////////////////////////////
 
@@ -275,16 +325,16 @@ Otherwise we have not.
 
 p q  #  p → q
 --------------
-T T  #    
-T F  #      
-F T  #    
-F F  #     
+T T  #    T
+T F  #    F broken promise, if part happened, didn't deliver on the "then"
+F T  #    T
+F F  #    T
 
 /////////////////////////////////////////
 
 How does the implies operator relate to programming?
 
-
+it's an if-then statement (condition and the statements inside)
 
 //////////////////////////////////////////
 
@@ -327,10 +377,9 @@ Consider ¬p ∨ q ∧ r.
 --> what operation do we do first?
 
 
-
 Order of operations
 
-In math?
+In math? () exponenet, multipulcation/division, addition/subtraction
 
 
 
@@ -339,6 +388,8 @@ For logic statements:
 
 From highest (happens first) to lowest (happens last) precedence:
 
+(), ¬, ∧, ∨, →
+parentheses, negation, and, or, implies
 
 ////////////////////////////////////////////////
 
@@ -348,7 +399,7 @@ Given this statement:
 
 Add () to show the order of operations.
 
-
+(¬p) ∨ (q ∧ r)
 
 
 Evaluate the above statement using these
@@ -358,7 +409,8 @@ p is T
 q is F
 r is F
 
-
+(F) ∨ (F)
+F
 
 ///////////////////////////////////////////
 
