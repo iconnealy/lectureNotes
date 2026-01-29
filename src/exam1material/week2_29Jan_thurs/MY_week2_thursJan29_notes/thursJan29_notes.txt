@@ -34,9 +34,14 @@ Propositional logic.
 
 --> what are propositional atoms?
 
+smallest pieces of a statement that can be true/false
+will be our variables
+
 --> what are propositions?
 
-
+a statement that can be true or false
+combination of propositional atoms and logical operators
+just a propositional atom
 
 
 ////////////////////////////////////////
@@ -48,12 +53,13 @@ z != 7 && str.contains(sub)
 
 --> what are the propositional atoms?
 
-
-
+p: z == 7
+q: str.contains(sub)
 
 
 --> express in propositional logic
 
+¬p ∧ q
 
 ////////////
 ∧ ∨ ¬ →
@@ -62,26 +68,31 @@ z != 7 && str.contains(sub)
 Example:
 
 You can't enroll for the course if you haven't taken 
-the prerequisite.
+the prerequisite or the course is full.
 
 
 --> what are the propositional atoms?
 
-
+p: you can enroll for the course
+q: you have taken the prerequisite
+r: the course is full
 
 --> translate to propositional logic:
 
-
+¬q ∨ r → ¬p
 
 really saying?
 
-
+If you haven't taken the prerequisite or the course is full then you can't enroll.
 
 What is the *contrapositive* of our statement?
 
+Contrapositive:
+- flip and negate
+p → q is equivalent to ¬q → ¬p
 
-
-
+p → ¬(¬q ∨ r)
+p → q ∧ ¬r (final contrapositive)
 
 //////////////////////////////////////////
 ∧ ∨ ¬ → 
@@ -97,13 +108,16 @@ if (x <= 2 || y >= 0) {
 
 Propositional atoms?
 
-
+p: x<=2
+q: y>=0
+r: z==17
+s: answer == 25
 
 
 Translation? (if ... then ...)
+If all conditions happened, then the answer will be 25
 
-
-
+(p ∨ q) ∧ ¬r → s  
 
 
 //////////////////////////////////
@@ -112,11 +126,19 @@ Consider these two statements:
 
 1) If I am at least 16 years old, then I can drive a car.
 
+p: age <=16
+q can drive a car
 
+p → q
+
+only false when p = T, q = F
 
 2) I'm not at least 16 years old or I can drive a car.
 
+¬p ∨ q
 
+only false when both sides of the OR are false
+p = T, q = F
 
 
 --> are they saying the same thing?
@@ -126,7 +148,10 @@ Consider these two statements:
 
 --> could we PROVE it? (equiv1.logika, equiv2.logika)
 
+complete truth tables for both statements
+show that they have the same output for every single truth assignment
 
+I know that they are the same because they have the same output for every single truth assignment
 
 //////////////////////////////////
 
@@ -134,13 +159,21 @@ Consider these two statements:
 
 1) If I am at least 16 years old, then I can drive a car.
 
+p → q
+
 2) If I can drive a car, then I am at least 16 years old.
 
+q → p
 
 --> are they saying the same thing?
 
+no
+
 --> could we PROVE our answer?
 
+it is enough to find ONE truth assignment where the two statements have different output
+p = F, q = T
+makes the first statement true but the second statement false
 
 //////////////////////////////////
 
@@ -159,7 +192,11 @@ if (a == 4 || a == 5) {
 How could we express the NEGATION
 (i.e., what condition would be true for the "else")?
 
+if (!(a == 4 || a == 5))
 
+negate an OR: negate both sides, flip to AND
+
+if (a != 4 && a != 5)
 
 
 
@@ -172,7 +209,7 @@ if (a == 4 && b == 5) {
 How could we express the NEGATION
 (i.e., what condition would be true for the "else")?
 
-
+(a != 4 || b != 5)
 
 
 
@@ -181,14 +218,14 @@ How could we express the NEGATION
 
 DeMorgan's laws in propositional logic:
 
-¬(p ∨ q) is equivalent to... 
+¬(p ∨ q) is equivalent to... ¬p ∧ ¬q
 
-¬(p ∧ q) is equivalent to...
+¬(p ∧ q) is equivalent to... ¬p ∨ ¬q
 
 
 --> how can we prove the first of DeMorgan's laws?
 
-
+complete truth tables, one for each statement
 
 
 
