@@ -30,7 +30,13 @@ An argument is of the form:
 
 --> When is an argument considered valid?
 
+propositional atoms (p,q)
+all the truth assignments
+    it is valid if for every truth assignment that makes
+        every premise true, then the conclusion is also true
 
+a tautology for the statement
+    premise1 ^ premise2^ premise3
 
 
 ///////////////////////////////////////
@@ -51,18 +57,28 @@ I want to prove:
 
 --> How would we translate to propositional logic?
 
-
 Propositional atoms:
 
+p: I am in the CS department
+q: I am in the ECE department
+r: I can log into the lab computers
 
 
 Translations:
 
+I am in the CS dept or I am in the ECE dept   
+p ∨ q
+
+I am not in the ECE dept    
+¬q
+
+I can log in to the CS lab computers if
+    I am in the CS dept
+p → r
+
 
 
 --> How to prove with a truth table?
-
-
 
 
 ////////////////////////////////
@@ -398,3 +414,5 @@ Next time:
 - Natural deduction to prove two statements are equivalent
 - Equivalent if-statements
 - If time, implies rules in natural deduction
+
+test

@@ -241,7 +241,7 @@ if (Character.isDigit(letter) || num < 10) {
 --> how would we negate it without using a ! operator?
     also no extra ()
 
-
+if (Character.isDigit(letter) == false && num >= 10)
 
 
 
@@ -253,7 +253,8 @@ if ((y >= 4 || num != 14) && x > 0) {
     statements
 }
 
-
+if (!(y >= 4 || num != 14) || x <= 0)
+if ((y < 4 && num == 14) || x <= 0)
 
 
 ///////////////////////
@@ -273,17 +274,25 @@ p → q ≡  ¬p ∨ q                     (can turn implies into an or)
 
 
 associative laws
-    in math?
-    for ∧, ∨, →?
+    in math? (1 + 2) + 3 is equivalent 1 + (2 + 3)
+    - is not associative
+    for ∧, ∨, →? ∧, ∨
+    → is not associative
+        1) (p → q) → r
+        2) p → (q → r)
 
+        p = F
+        q = F or T, doesn't matter
+        r = F
+
+        makes first statement false, second statement true
 
 
 commutative laws 
-    in math?
-    for ∧, ∨, →?
-
-
-
+    in math? 1 + 2 is equivalent to 2 + 1
+        - is not commutative
+    for ∧, ∨, →? ∧, ∨
+        → is not commutative
 
 --> you may still be asked to demonstrate these with
     truth tables or prove them with natural deduction 
@@ -296,11 +305,14 @@ Summary of equivalence.
 
 How do we prove two statements ARE equivalent?
 
+complete two truth tables
+show they have the same output for every single truth assignment
 
 
 
 How do we prove two statements are NOT equivalent?
 
+find one truth assignment that makes one statement true and the other false
 
 
 
@@ -317,12 +329,12 @@ Name two statements that are equivalent to:
 
 Satisfiability.
 
-- definition: 
-
+- definition: a proposition is satisfiable if we can find a truth assignment that makes the statement true
 
 
 - what kind of statement is satisfiable? what kind is not?
-
+    contingent, tautology statements are satisfiable
+    contradictory statements are NOT satisfiable
 
 
 
@@ -330,15 +342,22 @@ Satisfiability.
 
     (p ∨ ¬q) ∧ (q ∨ ¬r) ∧ (r ∨ ¬p)
 
+find ONE truth assignment that makes the statement true
+
+    p: T
+    q: T
+    r: T
+
 
 
 
 
 to show a statement is satisifiable: 
-
+    find ONE truth assignment that makes the statement true
 
 to show a statement is NOT satisfiable: 
-
+    need FULL truth table, show it is contradictory
+    (show that EVERY possible truth asisgnment makes the statement false)
 
 ////////////////////////////
 
