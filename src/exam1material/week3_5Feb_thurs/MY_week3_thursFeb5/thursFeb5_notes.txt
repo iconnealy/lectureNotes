@@ -134,6 +134,10 @@ OR elimination
 Idea:
 - If an OR statement is true, what do we know?
 
+p ∨ q 
+
+at least one of p and q are true
+
 
 
 
@@ -141,6 +145,8 @@ Idea:
 
 - What if we can reach the same conclusion no matter which side
     of the OR is true?
+
+    we know that the conclusion is true overall
 
 
 
@@ -169,7 +175,7 @@ else {
     some result
 }
 
---> what do we know is true here?
+--> what do we know is true here? some result
 
 
 
