@@ -4,6 +4,25 @@ HW 3 due tonight
 
     What will the structure be?
 
+    Try OrE on premise
+    Subproof: assume p or Q
+    
+    goal: r ∨ q ∨ p
+    top level is rightmost or
+    could introduce or if have r or Q
+        or if i have P
+
+        nested OrE
+        Subproof: assume(p)
+            goal:  r ∨ q ∨ p
+        
+        subproof: assume Q
+        goal:  r ∨ q ∨ p
+        first get r or Q
+        then get r or q or P
+    
+    subproof: assume r
+
 
     How to build conclusion?
 
@@ -22,6 +41,7 @@ No new homework this week
 Today:
 - more involved natural deduction examples
 - exam 1 review
+tomorrow 230-5 cs lounge
 
 /////////////////////
 
@@ -58,6 +78,13 @@ Logika features/tips
 /////////////////////////
 
 General proof strategy to this point
+
+1) list premises
+2) breakdown any premises you can to get extra information
+
+3) look at the conclusion
+
+4) consider if you will need OrE (probably will if you have an OR)
 
 
 

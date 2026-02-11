@@ -27,7 +27,7 @@ import org.sireum.justification.natded.prop._
 
           //goal: q | p
         )
-        8 (q | p) by OrE(1,2,5)
+        8 (q | p) by OrE(1,2,5) //why is this ill formed??
 
         //goal: q | p
     )

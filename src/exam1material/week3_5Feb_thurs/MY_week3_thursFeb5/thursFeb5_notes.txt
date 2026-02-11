@@ -220,13 +220,23 @@ Do you think we could prove:
 p ∨ q ⊢ p ∧ q
 Proof(
     1 ( p ∨ q) by Premise,
-    
+    2 SubProof(
+        3 Assume (p),
+        //goal: p ∧ q
+        //get stuck
+    )
 
 )
 
 
 
 What is the only way to prove an argument is invalid?
+never with natural deduction
+can prove it with a truth table, find ONE truth assignment where the premises are all true but
+the conclusion is false
+
+    p = F, q = T
+
 
 
 ////////////////////////////////
@@ -235,14 +245,16 @@ Order of operations:
 
 p ∨ q ∨ r
 
-with parentheses?
+with parentheses? (p ∨ q) ∨ r
 
 --> If I used OrE, what would be the two assumes in
     the subproofs?
+    - nested subproofs
 
 SubProof(
-    Assume ( ??? ),
+    Assume ( p ∨ q ),
     ...
+
 ),
 SubProof(
     Assume ( ??? )
@@ -255,6 +267,10 @@ Proving equivalence.
 
 --> how do we prove two statements are equal in truth tables?
 
+    filled out two truth tables
+    show that for every truth assignment, the two statements
+        had the same output
+
 
 
 
@@ -262,13 +278,9 @@ Proving equivalence.
 --> how do we do it with proofs?
 
 premise ⊢ conclusion
+conclusion ⊢ premise
 
-
-
-
-
-
-
+Two proofs
 
 
 ////////////////////////////////
