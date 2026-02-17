@@ -123,15 +123,37 @@ NOT equivalent?
 
 What is satisfiability? 
 
+    need ONE truth assigbment where the stteament outputs true
+    (if we did a truth table, would be a tautology or contingent)
+
+To show NOT satisfiable?
+
+    need FULL truth table to show the statement always outputs false
+    (i.e, is contradictory)
+
 
 
 - Determining whether an argument is valid or invalid
     (what is an argument?)
+
+        premises, conclusion
+
     valid: 
+        if for every truth assignment where all premises are true, 
+        the conclusion is also true
 
     how prove valid?
+        1) truth table with all premises and conclusion
+        look at truth assignments that make all premises true,
+        make sure they make the conclusion true
+
+        2) deduction
 
     how prove invalid?
+        find ONE truth assignment where all premises true 
+        but conclusion false
+
+        can't prove invalid with deduction
 
 
 /////////////////////////////////////////
