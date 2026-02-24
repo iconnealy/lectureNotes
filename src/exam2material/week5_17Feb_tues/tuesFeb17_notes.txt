@@ -1,5 +1,6 @@
 Exam 1 discussion.
 
+<<<<<<< HEAD
 Average: 73/100
 High: 103/100
 
@@ -8,20 +9,29 @@ B (80-89): ?? students
 C (70-79): ?? students
 D (60-69): ?? students
 F (below 60): 16 students
+=======
+(3 points added to all scores)
+
+Average: 73/100
+High: 103/100 (2 students)
+
+A (90-100): 19 students
+B (80-89): 3 students
+C (70-79): 6 students
+D (60-69): 5 students
+F (below 60): 16 students
+
+If you didn't do as well as you wanted?
+
+Discuss some exam problems.
+
+>>>>>>> 5f954c9753b9e4be7f49fa65aafbacd44b6e9334
 
 
 
 HW 4 will be posted after class, due Tuesday, February 24
 
 --> this is one of the more challenging assignments of the course
-
-/////////////////////
-
-"ill-formed program" error
-
-What does it mean?
-
-How to get more details?
 
 /////////////////////
 
@@ -168,6 +178,9 @@ p → ¬q ⊢ ¬(p ∧ q)
 
 ///////////////////
 
+<-- stopped here, will continue on Thursday
+
+///////////////////
 
 (not2.sc)
 ¬p ∧ ¬q ⊢ ¬(p ∨ q) (what is this? you'll prove the reverse

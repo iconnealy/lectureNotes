@@ -16,6 +16,7 @@ import org.sireum.justification.natded.prop._
 
         5 SubProof(
           6 Assume(p),
+<<<<<<< HEAD
           7 (r) by ImplyE(1,6)
 
           //goal: r
@@ -35,6 +36,20 @@ import org.sireum.justification.natded.prop._
       12 ( p | q __>: r  ) by ImplyI(3)
 
 
+=======
+          7 (r) by ImplyE(1, 6)
+          //goal: r
+        ),
+        8 SubProof(
+          9 Assume(q),
+          10 (r) by ImplyE(2, 9)
+        ),
+        11 (r) by OrE(4, 5, 8)
+
+        //goal: r
+      ),
+      12 (p | q __>: r) by ImplyI(3)
+>>>>>>> 5f954c9753b9e4be7f49fa65aafbacd44b6e9334
     )
   )
 }
