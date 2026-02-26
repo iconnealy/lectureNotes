@@ -70,16 +70,24 @@ How do we approach proofs?
     just a propositional atom? like p.
 
 
-After each claim - 
+After each claim - scan all available info see if you can extract anything
 
 
 
 Inside a subproof - 
     (What are the different subproofs?)
+    - OrE - both subproofs need to end with the same claim, which should be
+            whatever I was trying to prove when I opened the OrE subproofs
+    - ImplyI - try to get the right side of my goal imply statement
+    - PbC - F
+    - NegI - F
+
 
     --> when do we open a subproof?
+        when you have one of the four subproofs in mind
 
     --> can we assume anything in a subproof? 
+        can assume ANY one statement when opening a subproof
 
 
 
@@ -89,6 +97,8 @@ Doesn't fit a pattern or doesn't work out from above?
 
 
 When to use BottomE?
+- If you are using OrE and can't get your goal in one subproof, but can get F,
+use bottomE to assume whatever I want
 
 
 
@@ -131,14 +141,14 @@ SOUNDNESS and COMPLETENESS of natural deduction in
     "true": demonstrate an argument with truth tables
 
 
-SOUNDNESS: ??
+SOUNDNESS: ?? everything I can prove is actually true
 
 p ∧ q 
 --------
 p
 
 
-COMPLETENESS: ??
+COMPLETENESS: ?? I can prove everything that is true
 
 
 
@@ -171,6 +181,45 @@ are true, then q is also true
 
 (in-class quiz)
 
+1 SubProof(
+
+     2 Assume (a->b) | (a->c),
+
+     3 SubProof(
+
+          4 Assume a
+
+          5 SubProof( //nest orE
+
+               6 Assume (a ->b)
+
+               7
+
+               //goal: b|c
+
+          9 SubProof(
+
+10 Assume other side
+
+
+
+
+          //goal: b|c
+
+)
+
+     //goal: a -> b|c
+
+)
+
+
+
+
+use implyI
+
+
+
+
 //////////////////////////////////////
 
 Sets.
@@ -199,14 +248,16 @@ Example: A = {1,4,7,11,20}
 
 - Common sets in math:
 
-    ℕ: 
-    ℤ: 
-    ℚ: 
-    ℝ: 
-    ℂ: 
-    ∅: 
+    ℕ: natural numbers (integers starting with 1)
+    ℤ: integers (positive, negative, 0)
+    ℚ: rational numbers. I can write the number as
+        p/q where p, q ∈ ℤ and q != 0 (quotient)
+    ℝ: real numbers
+    ℂ: complex numbers
+    ∅: null set / empty set
 
 ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ ⊂ ℂ
+⊂ is subset of
 
 ////////////////////////////////////
 
@@ -219,14 +270,20 @@ Set builder notation.
 
 
 {x: x ∈ ℕ, 5 ≤ x ≤ 10}
+the set of all x such that x is a natural number between 5 and then
+
+{5,6,7,8,9,10}
 
 
 
 {k : k is a letter in "abracadabra"}
 
+{a,b,c,d,r}
+
 
 
 {x : x = 2k,  k ∈ ℕ}
+{2,4,6,8,10...}
 
 
 
