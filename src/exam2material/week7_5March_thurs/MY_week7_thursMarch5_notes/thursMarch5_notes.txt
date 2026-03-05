@@ -12,8 +12,18 @@ HW 5 comments:
 
 7 (a). If A ⋃ C = B ⋃ C, must A = B?
 
+A = {1,3}
+B = {2,3}
+C = {3}
 
 
+Is this a counterexample? NO!
+If we want a counterexample, needs sets ABC where A ⋃ C = B ⋃ C
+    but A != B
+
+A = {4}
+B = {??}
+C = {4}
 
 7 (b). If A ⋂ C = B ⋂ C, must A = B?
 
@@ -33,6 +43,10 @@ Arguments in predicate logic
 Set of premises
 Conclusion
 
+in propositional logic, valid when:
+    every truth assignment that makes each premise true
+    also make the conclusion true
+
 Argument is VALID in general: regardless of domain,
     whenever all the premises are true,
     then the conclusion is also true
@@ -46,28 +60,36 @@ Examples -- are the following arguments valid?
 
 ///
 
+Premises:
+everything that's P is also Q
+theres something in my domain that's P
+
 Premises: ∀ x (P(x) → Q(x)), ∃ x P(x)
 Conclusion: ∃ x Q(x)
 
 Valid or not? 
-
+whatever thing was P is also a thing tahat's Q
 
 ///
 
 Premises: ∀ x P(x)
 Conclusion: ∃ x P(x)
 
+everything in my domain is Palette
+there's something on my domain that's P
+
 Valid or not?
+no. wouldn't work if domain was empty
 
 /////////////////////////////////
 
-soundness ?
+soundness ? everything we can prove with our proof system is actaully true
 
 
 completeness ?
 
 
-predicate logic?
+predicate logic? will be incomplete
 
 /////////////////////////////////
 
@@ -206,11 +228,13 @@ First: consider these two statements:
 
 are they equivalent?
     ∀ x (P(x) ⋀ Q(x))  - translation?
+        everything n my domain is both P and Q
 
 
 
 
     (∀ x P(x)) ⋀ (∀ x Q(x)) - translation?
+        everything my domain is P ________
 
 
 
